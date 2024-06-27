@@ -1,4 +1,4 @@
-package space.bum.security04;
+package space.bum.jsp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
