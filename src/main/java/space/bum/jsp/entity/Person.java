@@ -13,7 +13,8 @@ import lombok.Data;
 
 @Entity
 @Table(uniqueConstraints = {
-    @UniqueConstraint(columnNames = { "personNumber", "isActive" }) })
+    @UniqueConstraint(name = "uniqActiveNumber", columnNames = { "personNumber",
+        "isActive" }) })
 @Data
 public class Person implements Serializable {
   @Id
