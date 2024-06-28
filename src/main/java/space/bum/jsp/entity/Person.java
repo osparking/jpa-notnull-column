@@ -33,5 +33,6 @@ public class Person implements Serializable {
   private String securityNumber;
   private String departmentCode;
   @JoinColumn(name = "addressId", referencedColumnName = "id")
+  @Column(unique = true)
   private Address address;
 }
