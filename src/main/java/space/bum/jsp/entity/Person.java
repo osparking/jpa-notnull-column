@@ -8,10 +8,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 import lombok.Data;
 
 @Entity
-@Table
+@Table(uniqueConstraints = {
+    @UniqueConstraint(columnNames = { "personNumber", "isActive" }) })
 @Data
 public class Person implements Serializable {
   @Id
@@ -19,7 +21,7 @@ public class Person implements Serializable {
   private Long id;
   private String name;
   private String password;
-  
+
   @Column(unique = true)
   private String email;
   @Column(unique = true)
