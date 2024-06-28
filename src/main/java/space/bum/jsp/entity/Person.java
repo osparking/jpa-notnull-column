@@ -2,6 +2,7 @@ package space.bum.jsp.entity;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -19,6 +20,7 @@ public class Person implements Serializable {
   private String name;
   private String password;
   private String email;
+  @Column(unique = true)
   private Long personNumber;
   private Boolean isActive;
   private String securityNumber;
