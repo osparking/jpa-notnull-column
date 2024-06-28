@@ -19,6 +19,8 @@ public class Person implements Serializable {
   private Long id;
   private String name;
   private String password;
+  
+  @Column(unique = true)
   private String email;
   @Column(unique = true)
   private Long personNumber;
