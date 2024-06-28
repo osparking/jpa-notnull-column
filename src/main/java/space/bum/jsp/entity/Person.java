@@ -16,7 +16,9 @@ import lombok.Data;
     @UniqueConstraint(name = "uniqActiveNumber", columnNames = { "personNumber",
         "isActive" }),
     @UniqueConstraint(name = "uniqSecuDeptCode", columnNames = {
-        "securityNumber", "departmentCode" }) })
+        "securityNumber", "departmentCode" }),
+    @UniqueConstraint(name = "uniqPersonNoAddr", columnNames = {
+        "personNumber", "address" }) })
 @Data
 public class Person implements Serializable {
   @Id
